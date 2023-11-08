@@ -6,11 +6,11 @@ from fpdf  import FPDF
 import glob
 
 files = glob.glob("textfiles/*.txt")
-
-print(files)
 pdf= FPDF(orientation="P", unit="mm", format="A4")
-# pdf.set_auto_page_break(auto=False)
 pdf.set_text_color(100,100,100)
+
+# pdf.set_auto_page_break(auto=False) not used as it doesn't make any sense
+
 
 for filepaths in files:
 
